@@ -16,6 +16,7 @@
       <h2>Cart({{cart.length}})</h2>
     </div>
     <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
+    <review-list :review="reviews"></review-list>
     <review-form @add-review="addReview"></review-form>
     <button class="button" @click="CreateCSV">CSV</button>
   </div>
@@ -25,6 +26,7 @@
   <!-- Import Component -->
   <script src="./components/ProductDisplay.js"></script>
   <script src="./components/ReviewForm.js"></script>
+  <script src="./components/ReviewList.js"></script>
 
   <script>
     const mountedApp = app.mount('#app')

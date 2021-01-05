@@ -35,7 +35,8 @@ app.component('product-display', {
                 { id: 2235, color: 'blue', variantImage: './assets/images/socks_blue.jpg', quantity: 0 },
             ],
             activeClass: false,
-            brand: "Pat's socks"
+            brand: "Pat's socks",
+            reviews: [],
         }
     },
     methods: {
@@ -45,6 +46,9 @@ app.component('product-display', {
         },
         addToCart() {
             this.$emit('add-to-cart', this.variants[this.selectedVariant].id)
+        },
+        addReview(review) {
+            this.reviews.push(review);
         }
     },
     computed: {

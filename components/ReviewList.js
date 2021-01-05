@@ -16,5 +16,8 @@ app.component('review-list', {
                 "{{review.review}}"
             </li>
         </ul>
-    </div>`
+    </div>`,
+    methods: {
+        addReview(productReview);
+    },
 })
